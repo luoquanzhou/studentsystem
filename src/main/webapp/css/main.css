@@ -1,0 +1,52 @@
+*{
+	margin:0;
+	padding:0;
+}
+div{
+	
+	margin:0 auto;
+}
+body{
+	background-color:#0EA8D8;
+	background:
+	url("/home/soft01/桌面/doc/img/login_bg.jpg")
+	;
+}
+.logo{
+	width:1200px;
+	height:61px;
+}
+.mainimg{
+	width:100%;
+	height:200px;
+}
+.data{
+	width:1200px;
+	height:600px;
+}
+.copy{
+	width:1200px;
+	height:61px;
+}
+.copy p{
+	text-align: center;
+	line-height: 30px;
+}
+.logo_u{
+	list-style-type: none;
+	
+}
+.logo_u>li{
+	line-height: 61px;
+	text-align: center;
+	float:right;
+	margin-right:20px;
+}
+li a{
+	direction: none;
+}
+.text{
+	font-size: 60px;
+	line-height:600px;
+	text-align: center;
+}

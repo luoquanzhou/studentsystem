@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="tea.dao.TeainfoDAO">
+	<!-- id属性：要求唯一 
+			parameterType属性：参数类型
+			//	teaid varchar2(10) primary key,	teaname	teasex	teaage	teatel	teaadd	teajob	teaqq	teaemail	teaexp
+	-->
+	<insert id="teasave" parameterType="info.Teainfo">
+		insert into teacherinform_lqz values(#{teaid},#{teaname,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teasex,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teaage,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teatel,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teaadd,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teajob,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teaqq,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teaemail,jdbcType=VARCHAR,typeHandler=util.NullValueHander},#{teaexp,jdbcType=VARCHAR,typeHandler=util.NullValueHander})
+	</insert>
+	<delete id="teadelete" parameterType="java.lang.String">
+		delete from teacherinform_lqz where teaid=#{teaid}
+	</delete>
+	<select id="findTeaById" parameterType="java.lang.String" resultType="info.Teainfo">
+		select * from teacherinform_lqz where teaid=#{teaid}
+	</select>
+	<select id="findTeaByName" parameterType="java.lang.String" resultType="info.Teainfo">
+		select * from teacherinform_lqz where teaname=#{teaname}
+	</select>
+	<select id="findTeaAll" resultType="info.Teainfo">
+		select * from teacherinform_lqz 
+	</select>
+	<update id="teaUpdate" parameterType="info.Teainfo">
+		update teacherinform_lqz set teaname=#{teaname},teasex=#{teasex},teaage=#{teaage},teatel=#{teatel},
+		teaadd=#{teaadd},teajob=#{teajob},teaqq=#{teaqq},teaemail=#{teaemail},teaexp=#{teaexp} where teaid=#{teaid}
+	</update>
+	
+</mapper>

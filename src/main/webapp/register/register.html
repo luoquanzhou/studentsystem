@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>注册</title>
+<link rel="stylesheet" href="/spring-exercise/css/register_list.css">
+<script src="/spring-exercise/js/register.js"></script>
+<script src="/spring-exercise/js/jquery-1.11.1.js"></script>
+</head>
+<body>
+	<!-- logo -->
+	<div class="logo"></div>
+	<!-- data -->
+	<div class="data">
+		<div class="data_main">
+		<p class="reglogo"><span class="reglogo_hint">注册</span></p>
+		<form action="register.do"  onsubmit="return checkReg()+checkUser()+checkPawd()+checkPwad1()+checkEmail()==5" method="post">
+		<ul class="regtext">
+		
+			<li class="regemail">
+				<p class="reg">邮箱帐号</p>
+				<p class="reg_error" id="id_regerror"></p>
+				<input type="text" placeholder="请输入邮箱帐号" name="useremail" class="regtel_input" id="id_reg" onblur="checkReg();"/>
+			</li>
+			<li>
+				<p class="username">学号</p>
+				<p class="username_error" id="id_usererror"></p>
+				<input type="text" maxlength="18" placeholder="5-16位中英文、数字" name="userid" class="username_input" id="id_user" onblur="checkUser();"/>
+			</li>
+			<li>
+				<p class="password">设置密码</p>
+				<p class="password_error" id="id_pawderror"></p>
+				<input type="password" maxlength="16" placeholder="请输入密码(6-16位数字、字母或者字符的组合)"  class="password_input"id="id_pawd" onblur="checkPawd();"/>
+			</li>
+			<li>
+				<p class="password1">确认密码</p>
+				<p class="password1_error" id="id_pawd1error"></p>
+				<input type="password" maxlength="16" placeholder="请输入密码(6-16位数字、字母或者字符的组合)" name="userpwd" class="password1_input"id="id_pwad1" onblur="checkPwad1();"/>
+			</li>
+			<li>
+				<p class="email">邮箱验证码</p>
+				<p class="email_error"id="id_emailerror"></p>
+				<input type="text" placeholder="请输入邮箱验证码" name="usercode" class="email_input"id="id_email" onblur="checkEmail();"/>
+				<em id="email_phone" ><input type="button" value="获取验证码"  onclick="getregsitercode();" id="getcode_id" style="width:75px;text-align: center;"/></em>
+			
+			</li>
+			<li>
+				<a class="register"><input type="submit" value="同意协议并注册" class="register_but" onclick="tj();"/></a>
+			</li>
+		</ul>
+		</form>
+			<p class="protocol">
+				<input type="checkbox" class="checks" checked onclick="checkBox();"/>我已阅读协议并同意<a href="#">《用户注册协议》</a><span class="checkerror" id="id_check"></span>
+			</p>
+			<p class="x-right">已有帐号？<a href="/spring-exercise/login/login.html">立即登录</a></p>
+			</div>
+	</div>
+	<!-- copy -->
+	<div class="copy">
+		<p>© 2017</p>
+		<p>版权所有，盗版必究</p>
+	</div>
+</body>
+</html>

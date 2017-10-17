@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="tea.dao.TeaCourDAO">
+<!-- 
+create table teacourinfom_lqz(
+couid varchar2(10) primary key,
+couname varchar2(20),
+coustytime varchar2(10),
+couscore varchar2(2),
+coustatime varchar2(20),
+couteaname varchar2(20),
+couteaid varchar2(10) references teacherinform_lqz(teaid)
+);
+
+ -->
+	<insert id="taeacousave" parameterType="info.TeaCourinfo">
+		insert into teacourinfom_lqz values(#{couid}, #{couname,jdbcType=VARCHAR,typeHandler=util.NullValueHander}, 
+		#{coustytime,jdbcType=VARCHAR,typeHandler=util.NullValueHander}, #{couscore,jdbcType=VARCHAR,typeHandler=util.NullValueHander}, #{coustatime,jdbcType=VARCHAR,typeHandler=util.NullValueHander},
+		 #{couteaname,jdbcType=VARCHAR,typeHandler=util.NullValueHander}, #{couteaid,jdbcType=VARCHAR,typeHandler=util.NullValueHander}) 
+	</insert>
+	<select id="findTeaCourByCouId" parameterType="java.lang.String" resultType="info.TeaCourinfo">
+		select * from teacourinfom_lqz where couid=#{couid}
+	</select>
+	<select id="findTeaCourByCouName" parameterType="java.lang.String" resultType="info.TeaCourinfo">
+		select * from teacourinfom_lqz where couname=#{couname}
+	</select>
+	<select id="findTeaCourByTeaId" parameterType="java.lang.String" resultType="info.TeaCourinfo">
+		select * from teacourinfom_lqz where couteaid=#{couteaid}
+	</select>
+	<select id="findTeaCourByTeaName" parameterType="java.lang.String" resultType="info.TeaCourinfo">
+		select * from teacourinfom_lqz where couteaname=#{couteaname}
+	</select>
+	<select id="findTeaCourAll" resultType="info.TeaCourinfo">
+		select * from teacourinfom_lqz
+	</select>
+	<delete id="deleteTeaCourByCouID" parameterType="java.lang.String">
+		delete from teacourinfom_lqz  where couid=#{couid}
+	</delete>
+	<delete id="deleteTeaCourByTeaID" parameterType="java.lang.String">
+		delete from teacourinfom_lqz  where couteaid=#{couteaid}
+	</delete>
+	<update id="updateTeaCour" parameterType="info.TeaCourinfo">
+		update teacourinfom_lqz set couname=#{couname},coustytime=#{coustytime},couscore=#{couscore},
+		coustatime=#{coustatime},couteaname=#{couteaname},couteaid=#{couteaid} where couid=#{couid}
+	</update>
+	
+	
+</mapper>

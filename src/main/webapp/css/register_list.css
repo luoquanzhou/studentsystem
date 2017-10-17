@@ -1,0 +1,163 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:"微软雅黑","文泉驿正黑","黑体";
+}
+body{
+	background-color:#0EA8D8;
+}
+div{
+
+	margin:0 auto;
+	
+}
+
+.logo{
+	width:1200px;
+	height:61px;
+}
+.data{
+	width:100%;
+	height:600px;
+	
+
+}
+.copy{
+	width:1200px;
+	height:61px;
+}
+.reglogo{
+	border:1px solid blue;
+	width:434px;
+	height:64px;
+	margin-top:26px;
+	margin:0 auto;
+	line-height: 64px;
+	background-color: #fff;
+}
+.reglogo>.reglogo_hint{
+	width:100px;
+	
+	display:inline-block;
+	display:table;
+	margin:0 auto;	
+}
+.reglogo_hint{
+	height:24px;
+	border:1px solid blue;
+	text-align: center;
+}
+.regtext{
+	border:1px solid blue;
+	width:434px;
+	height:405px;
+	margin:0 auto;
+	list-style-type: none;
+	background-color:#fff;
+	margin-bottom: 20px;
+}
+.regtext>li{
+	border:1px solid yellow;
+	width:428px;
+	height:64px;
+	
+	font-size: 15px;
+	text-decoration:none;
+	
+}
+.register{
+	width:434px;
+	height:40px;
+	display:inline-block;
+	background-color: #31b0d5;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top:20px;
+}
+.register:hover,#email_phone>input:hover,.register_but:hover{
+	background-color: #31cfd5;
+}
+.reg_error,.username_error,.password_error,.password1_error,.email_error{
+	float:right;
+}
+.ok{
+	color:green;
+	float:right;
+}
+.error{
+	color:red;
+	font-weight: normal;
+	width:300px;
+	font-size: 13px;
+	float:right;
+	text-align: right;
+}
+.reg,.username,.password,.password1,.email{
+	float:left;
+}
+.regtel_input,.username_input,.password_input,.password1_input,.email_input{
+	width:377px;
+	height:38px;
+	padding-left:55px;
+}
+.register_but{
+
+	width:434px;
+	height:40px;
+	display:inline-block;
+	background-color: #31b0d5;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	cursor: pointer;
+	
+}
+
+#email_phone>input{
+	background-color: #31b0d5;
+	cursor: pointer;
+	list-style-type: none;
+}
+.data_main{
+	width:434px;
+	height:540px;
+	padding:18px 38px;
+	background-color: #fff;
+}
+.protocol{
+	font-size: 13px;
+	float:left;
+}
+.x-right{
+	font-size: 13px;
+	float:right
+}
+.checkbox,.checkerror{
+	float:left;
+}
+.error1{
+	color:red;
+	font-weight: normal;
+	
+	font-size: 13px;
+	float:left;
+
+}
+.logo{
+	background: url(../imgs/top_bg.png) repeat;
+}
+/*版权区*/
+.copy p{
+	text-align: center;
+	line-height: 30px;
+}
+.data>.reglogo,.regtext,.reglogo_hint,.reglogo{
+	border:0;
+}
+.relogo_hint,.regtext>li,.regtext{
+	border:0;
+}
+
+

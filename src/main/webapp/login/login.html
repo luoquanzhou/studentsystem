@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="/spring-exercise/css/login_list.css"/>
+<script src="/spring-exercise/js/jquery-1.11.1.js"></script>
+<script src="/spring-exercise/js/login.js"></script>
+</head>
+<body>
+
+	<!-- logo -->
+	<div class="logo"></div>
+	<!-- data -->
+	<div class="data">
+		<form action="login.do" onsubmit="return checkSec()+checkCode()+checkPawd()==3" method="post" >
+		<p class="loginlogo"><span class="loginlogo_hint">登录</span></p>
+		<ul class="logintext">
+			<li class="select">
+				<p class="select_log">登录方式</p>
+				<span class="select_error" id="id_selterror"></span>
+				<p class="select_p">
+					<select class="select_box" id="id_selt" onchange="checkSec();" name="usertype">
+						<option selected>请选择：</option>
+						<option value="1">学生</option>
+						<option value="2">教师</option>
+						<option value="0">管理员</option>
+					</select>
+						
+				</p>
+			</li>
+			
+			<li>
+				<p class="account">用户帐号</p>
+				<p class="account_error" id="id_acterror"></p>
+				<p class="account_hint">没有帐号？<a href="/spring-exercise/register/register.html"class="account_a1">快速注册</a></p>
+				<input type="text" placeholder="请输入帐号" class="account_input" id="id_input" onblur="checkCode();" name="username"/>
+			</li>
+			<li>
+				<p class="password">用户密码</p>
+				<p class="password_error" id="id_pawderror"></p>
+				<p class="password_hint"><a href="#" class="password_a2">忘记密码？</a></p>
+				<input type="password" placeholder="请输入密码" class="password_input" id="id_pawd" onblur="checkPawd();" name="userpwd"/>
+			</li>
+			<li>
+				<a class="login"><input type="submit" value="登录" class="login_but"/></a>
+			</li>
+		</ul>
+		</form>
+	</div>
+	<!-- copy -->
+	<div class="copy">
+		<p>© 2017</p>
+		<p>版权所有，盗版必究</p>
+	</div>
+</body>
+</html>
