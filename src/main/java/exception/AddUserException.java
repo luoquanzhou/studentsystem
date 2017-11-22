@@ -15,6 +15,9 @@ public class AddUserException extends RuntimeException{
 		super(message);
 	
 	}
+	public static void main(String[] args) {
+		
+	}
 	
 
 }

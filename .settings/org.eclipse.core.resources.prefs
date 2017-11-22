@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
 encoding//src/main/java/mail=GBK
+encoding//src/main/java/util/AuthCodeUtil.java=UTF-8
+encoding//src/main/java/util/MailUtil.java=UTF-8
